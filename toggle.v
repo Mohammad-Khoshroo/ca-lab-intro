@@ -1,8 +1,8 @@
 module toggle(
-    input key0, key1,
-    output led
+    input key1, key2,
+    output led1, led2
 );
 
-    assign led = 1 ? ~key1 : (0 ? ~key0 : 1);  
+    assign led1 = 1 ? ~key1 : (0 ? ~key2 : 1);  
 
 endmodule
