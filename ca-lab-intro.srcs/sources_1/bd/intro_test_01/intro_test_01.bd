@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xBFE29F6DBFE29F6D",
+      "boundary_crc": "0xBFE29F6D194AB6A7",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../ca-lab-intro.gen/sources_1/bd/intro_test_01",
       "name": "intro_test_01",
@@ -100,6 +100,10 @@
           "boundary_crc": "0x0"
         },
         "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
           "key1": {
             "direction": "I"
           },
@@ -120,7 +124,8 @@
         "ports": [
           "clk",
           "debouncer_0/CLK_I",
-          "debouncer_1/CLK_I"
+          "debouncer_1/CLK_I",
+          "toggle_0/clk"
         ]
       },
       "SIGNAL_I_0_1": {

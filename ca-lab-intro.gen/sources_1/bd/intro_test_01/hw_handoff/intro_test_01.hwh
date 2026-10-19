@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 19 14:58:21 2026" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 19 15:35:29 2026" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="intro_test_01" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -8,6 +8,7 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="debouncer_0" PORT="CLK_I"/>
         <CONNECTION INSTANCE="debouncer_1" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="toggle_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="0" NAME="key1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_key1">
@@ -96,6 +97,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="key1" SIGIS="undef" SIGNAME="debouncer_0_SIGNAL_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="debouncer_0" PORT="SIGNAL_O"/>

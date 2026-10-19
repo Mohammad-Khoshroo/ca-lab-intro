@@ -56,18 +56,23 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intro_test_01_toggle_0_0 (
+  clk,
   key1,
   key2,
   led1,
   led2
 );
 
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
+input wire clk;
 input wire key1;
 input wire key2;
 output wire led1;
 output wire led2;
 
   toggle inst (
+    .clk(clk),
     .key1(key1),
     .key2(key2),
     .led1(led1),
